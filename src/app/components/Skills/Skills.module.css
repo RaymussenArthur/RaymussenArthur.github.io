@@ -1,0 +1,353 @@
+.skillsSection {
+  padding: 120px 0;
+  position: relative;
+  background: linear-gradient(180deg, transparent, rgba(0, 255, 255, 0.02), transparent);
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 60px;
+  animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.sectionHeader h2 {
+  font-size: clamp(36px, 5vw, 56px);
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+
+.sectionHeader p {
+  color: #888;
+  font-size: 18px;
+}
+
+/* Tab Buttons */
+.tabButtons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 60px;
+  flex-wrap: wrap;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tabButton {
+  padding: 14px 30px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50px;
+  color: #888;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.4s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.tabButton::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(0, 255, 255, 0.1);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.tabButton:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.tabButton:hover {
+  border-color: rgba(0, 255, 255, 0.3);
+  color: #00ffff;
+  transform: translateY(-3px);
+}
+
+.tabButton.active {
+  background: linear-gradient(135deg, #00ffff, #00aa88);
+  border-color: #00ffff;
+  color: #000;
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.5);
+  transform: scale(1.05);
+}
+
+.tabButton.active:hover {
+  transform: scale(1.05) translateY(-3px);
+}
+
+.tabIcon {
+  font-size: 20px;
+  display: inline-block;
+  transition: transform 0.3s;
+}
+
+.tabButton:hover .tabIcon {
+  transform: scale(1.2) rotate(10deg);
+}
+
+.tabButton.active .tabIcon {
+  animation: bounce 1s ease infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+/* Skills Slider */
+.skillsSlider {
+  display: flex;
+  align-items: center;
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.skillsGridWrapper {
+  overflow: visible;
+  width: 100%;
+}
+
+.skillsGridContainer {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.skillsGrid {
+  flex: 0 0 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  padding: 0 15px;
+}
+
+.skillCard {
+  background: rgba(255, 255, 255, 0.03);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 25px;
+  padding: 40px 20px;
+  text-align: center;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  animation: fadeIn 0.6s ease-out backwards;
+}
+
+.scrollButton {
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  transition: all 0.3s;
+  z-index: 10;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.scrollButton:hover {
+  background: rgba(0, 255, 255, 0.1);
+  border-color: #00ffff;
+  color: #00ffff;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.scrollButton:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.scrollLeft {
+  left: -70px;
+}
+
+.scrollRight {
+  right: -70px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.skillCard:nth-child(1) { animation-delay: 0.1s; }
+.skillCard:nth-child(2) { animation-delay: 0.15s; }
+.skillCard:nth-child(3) { animation-delay: 0.2s; }
+.skillCard:nth-child(4) { animation-delay: 0.25s; }
+.skillCard:nth-child(5) { animation-delay: 0.3s; }
+.skillCard:nth-child(6) { animation-delay: 0.35s; }
+.skillCard:nth-child(7) { animation-delay: 0.4s; }
+.skillCard:nth-child(8) { animation-delay: 0.45s; }
+
+.skillCard::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, transparent, rgba(0, 255, 255, 0.1), transparent);
+  transform: rotate(45deg);
+  transition: all 0.6s;
+}
+
+.skillCard:hover::before {
+  left: 100%;
+}
+
+.skillCard:hover {
+  transform: translateY(-15px) scale(1.05);
+  border-color: #00ffff;
+  box-shadow: 0 20px 50px rgba(0, 255, 255, 0.3);
+}
+
+/* Icon Styling */
+.skillIcon {
+  font-size: 60px;
+  margin-bottom: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  animation: float 3s ease-in-out infinite;
+  color: #00ffff;
+  filter: drop-shadow(0 0 10px rgba(0, 255, 255, 0.3));
+}
+
+.skillIcon svg {
+  width: 60px;
+  height: 60px;
+  transition: all 0.3s;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.skillCard:hover .skillIcon {
+  animation: spin 0.8s ease-in-out;
+  filter: drop-shadow(0 0 20px rgba(0, 255, 255, 0.6));
+}
+
+.skillCard:hover .skillIcon svg {
+  transform: scale(1.2);
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg) scale(1); }
+  50% { transform: rotate(180deg) scale(1.2); }
+  100% { transform: rotate(360deg) scale(1); }
+}
+
+.skillName {
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+  transition: color 0.3s;
+}
+
+.skillCard:hover .skillName {
+  color: #00ffff;
+}
+
+@media (max-width: 1340px) {
+  .scrollLeft {
+      left: 10px;
+  }
+  .scrollRight {
+      right: 10px;
+  }
+}
+
+@media (max-width: 968px) {
+  .skillsGrid {
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 20px;
+  }
+  
+  .skillCard {
+    padding: 35px 15px;
+  }
+  
+  .skillIcon svg {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .skillName {
+    font-size: 14px;
+  }
+  
+  .tabButton {
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+  
+  .tabIcon {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .tabButtons {
+    gap: 10px;
+  }
+  
+  .tabButton {
+    padding: 12px 20px;
+    font-size: 13px;
+    flex: 1;
+    min-width: 0;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .skillsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+  
+  .tabButtons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    width: 100%;
+  }
+  
+  .tabButton {
+    padding: 14px 10px;
+    font-size: 13px;
+  }
+  
+  .skillIcon svg {
+    width: 45px;
+    height: 45px;
+  }
+}

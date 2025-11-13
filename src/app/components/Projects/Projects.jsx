@@ -1,48 +1,51 @@
 'use client'
 
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css"; 
-import "slick-carousel/slick/slick-theme.css";
-import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import styles from './Projects.module.css'
 import ProjectCard from './ProjectsCard'
 
+// 1. LINK DITAMBAHKAN DI SINI
 const projectsData = [
   {
     number: "01",
-    title: "Customer Churn Prediction",
-    description: "Developed a machine learning model to predict customer churn for a telecommunications company, resulting in a 15% reduction in customer attrition.",
-    techStack: ["Python", "Scikit-learn", "Pandas", "Matplotlib"]
+    title: "Life-Style Recommendation API",
+    description: "A machine learning model (RandomForest) to provide lifestyle recommendations, deployed as a Flask API for an Android mobile app.",
+    techStack: ["Python", "Scikit-learn", "Pandas", "Flask", "Jupyter"],
+    link: "https://github.com/RaymussenArthur/Life-Style-Recommendation"
   },
   {
     number: "02",
-    title: "Sales Forecasting",
-    description: "Built a time-series model to forecast sales for a retail client, improving inventory management and reducing stockouts by 20%.",
-    techStack: ["Python", "TensorFlow", "Keras", "Seaborn"]
+    title: "Movie Recommendation System",
+    description: "Content-based system using TF-IDF and Cosine Similarity. Fetches data from Firebase/OMDb and provides XAI explanations using LIME.",
+    techStack: ["Python", "Pandas", "Scikit-learn", "Firebase", "LIME", "thefuzz"],
+    link: "https://github.com/rVerKotz/ML_Project"
   },
   {
     number: "03",
-    title: "Sentiment Analysis of Social Media Data",
-    description: "Performed sentiment analysis on social media data to gauge public opinion about a new product launch, providing actionable insights to the marketing team.",
-    techStack: ["Python", "NLTK", "TextBlob", "Plotly"]
+    title: "Brain Tumor MRI Classification",
+    description: "A 2-model pipeline: an object detection model (Roboflow) finds the tumor, and a classification model (EfficientNet) classifies it.",
+    techStack: ["Python", "Roboflow", "EfficientNet", "Kaggle", "Computer Vision"],
+    link: "https://www.kaggle.com/code/raymussenarthur/tumor-mri-modeling"
   },
   {
     number: "04",
-    title: "Image Classification for Medical Diagnosis",
-    description: "Developed a deep learning model to classify medical images, assisting doctors in making more accurate diagnoses.",
-    techStack: ["Python", "TensorFlow", "Keras", "OpenCV"]
+    title: "House Price Prediction (Kaggle)",
+    description: "A complete regression project for the Kaggle House Prices competition. Uses a tuned LightGBM model and explains predictions with SHAP.",
+    techStack: ["Python", "LightGBM", "XGBoost", "Scikit-learn", "SHAP", "Kaggle"],
+    link: "https://github.com/RaymussenArthur/House-Price"
   },
   {
     number: "05",
-    title: "Credit Card Fraud Detection",
-    description: "Built a real-time fraud detection system for a financial services company, saving millions of dollars in fraudulent transactions.",
-    techStack: ["Python", "Scikit-learn", "XGBoost", "Flask"]
+    title: "Mobile Phone Price Prediction",
+    description: "A regression project to predict smartphone prices based on specs. A tuned XGBoost model achieved the best performance (R² 0.73).",
+    techStack: ["Python", "XGBoost", "Scikit-learn", "Gradient Boosting", "EDA"],
+    link: "https://github.com/RaymussenArthur/Phone-Prediction"
   },
   {
     number: "06",
-    title: "Natural Language Processing for Chatbots",
-    description: "Developed a chatbot using natural language processing to answer customer queries, improving customer satisfaction by 25%.",
-    techStack: ["Python", "NLTK", "spaCy", "Dialogflow"]
+    title: "Personality Prediction (Kaggle)",
+    description: "Solution for Kaggle S5E7. Builds four independent XGBoost models to predict the 16-type personality (e.g., INTJ) from survey answers.",
+    techStack: ["Python", "XGBoost", "Pandas", "Scikit-learn", "Kaggle"],
+    link: "https://github.com/RaymussenArthur/Personality-Prediction"
   }
 ]
 

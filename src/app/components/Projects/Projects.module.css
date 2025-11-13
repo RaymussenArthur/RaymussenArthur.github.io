@@ -118,14 +118,26 @@
   color: #fff;
   text-decoration: none;
   font-weight: 600;
-  transition: all 0.3s;
+  transition: color 0.3s ease; /* Hanya transisi warna */
+  margin-top: auto; /* Memastikan rata bawah */
+  position: relative;
+  z-index: 2;
 }
 
 .projectLink:hover {
-  color: #00ffff;
-  gap: 15px;
+  color: #00ffff; /* Ubah warna saat hover */
 }
 
+/* CSS baru untuk panah */
+.projectLinkArrow {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+/* CSS baru untuk animasi hover panah */
+.projectLink:hover .projectLinkArrow {
+  transform: translateX(5px); /* Gerakkan panah 5px */
+}
 @media (max-width: 968px) {
   .projectsGrid {
     grid-template-columns: 1fr;

@@ -2,7 +2,7 @@
 
 import styles from './Projects.module.css'
 
-export default function ProjectCard({ number, title, description, techStack }) {
+export default function ProjectCard({ number, title, description, techStack, link }) {
   return (
     <div className={styles.projectCard}>
       <div className={styles.projectNumber}>{number}</div>
@@ -13,8 +13,15 @@ export default function ProjectCard({ number, title, description, techStack }) {
           <span key={index} className={styles.techTag}>{tech}</span>
         ))}
       </div>
-      <a href="#" className={styles.projectLink}>
-        View Details →
+      <a 
+        href={link} 
+        target="_blank"
+        rel="noopener noreferrer" 
+        className={styles.projectLink}
+      >
+        View Details 
+        {/* Panah dipisah ke span agar bisa dianimasikan oleh CSS */}
+        <span className={styles.projectLinkArrow}>→</span>
       </a>
     </div>
   )

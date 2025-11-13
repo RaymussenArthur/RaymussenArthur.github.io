@@ -3,7 +3,6 @@
 import styles from './Projects.module.css'
 import ProjectCard from './ProjectsCard'
 
-// 1. LINK DITAMBAHKAN DI SINI
 const projectsData = [
   {
     number: "01",

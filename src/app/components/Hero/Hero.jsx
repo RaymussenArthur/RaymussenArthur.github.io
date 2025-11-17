@@ -29,7 +29,7 @@ export default function Hero() {
           
           {/* Buttons */}
           <div className={styles.heroButtons}>
-            <a href="\RaymussenAW_CV.pdf" download="Raymussen_Arthur_Wijaya_CV.pdf" className="btn btn-primary">
+            <a href="\Raymussen_Arthur_Wijaya_resume.pdf" download="Raymussen_Arthur_Wijaya_resume.pdf" className="btn btn-primary">
               <FaDownload />
               <span> Download CV</span>
             </a>

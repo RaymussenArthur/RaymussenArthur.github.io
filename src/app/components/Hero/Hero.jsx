@@ -18,13 +18,12 @@ export default function Hero() {
           </h1>
           
           <h2 className={styles.subtitle}>
-            <span className={styles.roleText}>Data Scientist</span>
+            <span className={styles.roleText}>Data Scientist & Cloud Engineer</span>
             <span className={styles.cursor}>|</span>
           </h2>
           
           <p className={styles.description}>
-            Passionate about uncovering insights from data and building intelligent solutions. 
-            Specialized in machine learning, data analysis, and visualization.
+            Passionate about uncovering insights and building scalable intelligent solutions. Specialized in machine learning, data analysis, and cloud deployment.
           </p>
           
           {/* Buttons */}

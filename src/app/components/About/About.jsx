@@ -21,13 +21,11 @@ export default function About() {
             </div>
             
             <p className={styles.description}>
-              Hi! I'm <strong>Raymussen Arthur Wijaya</strong>, a passionate Data Scientist
-              with a knack for turning complex data into actionable insights.
+              Hi! I'm <strong>Raymussen Arthur Wijaya</strong>, a passionate Data Scientist & Cloud Enthusiast with a knack for building scalable AI solutions and actionable insights.
             </p>
             
             <p className={styles.description}>
-              I specialize in machine learning, statistical analysis, and data visualization. I have experience
-              in building predictive models, analyzing large datasets, and creating interactive dashboards.
+              I specialize in machine learning, cloud computing, and data visualization. I have experience in building predictive models, deploying scalable solutions, and creating interactive dashboards.
             </p>
             
             <p className={styles.description}>
